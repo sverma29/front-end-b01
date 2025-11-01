@@ -35,3 +35,34 @@ show();
 // console.log(functionVar); // Throws ReferenceError
 // console.log(functionLet); // Throws ReferenceError
 // console.log(functionConst); // Throws ReferenceError
+
+// Practice Task
+{
+    let tempLet = "block scoped let"
+    var tempVar = "block scoped var"
+    const tempConst = "block scoped const"
+    
+    // Reassign variables
+    tempLet = "Reassigned tempLet - inside block"
+    tempVar = "Reassigned tempVar - inside block"
+    // tempConst = "Reassigned tempConst - inside block" //TypeError: Assignment to constant variable.
+
+    console.log(tempLet)
+    console.log(tempVar)
+    console.log(tempConst)
+}
+
+// -------------------------------------------------
+ // Reassign variables outside block - All of the following works
+//  tempLet = "Reassigned tempLet - outside block"
+//  tempVar = "Reassigned tempVar - outside block"
+//  tempConst = "Reassigned tempConst - inside block"
+
+//  console.log(tempLet)
+//  console.log(tempVar)
+//  console.log(tempConst)
+// -------------------------------------------------
+
+//  console.log(tempLet) // Uncaught ReferenceError: tempConst is not defined
+ console.log(tempVar)
+//  console.log(tempConst) // Uncaught ReferenceError: tempConst is not defined
