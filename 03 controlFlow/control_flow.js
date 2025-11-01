@@ -49,3 +49,24 @@ console.log("User Category:", userCategory);
 
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+// Practice Task
+let userTypeProgram = "enrolled_member";
+let servicesAvailable;
+
+switch (userTypeProgram) {
+    case 'employee':
+        servicesAvailable = "Dietary Services";
+        break;
+    case 'enrolled_member':
+        servicesAvailable = "Dietary Services and one-on-one interaction with a dietician";
+        break;
+    case 'subscriber':
+        servicesAvailable = "Partial access to Dietary Services";
+        break;
+    case 'non_subscriber':
+        servicesAvailable = "Need to enroll or atleast subscribe to avail this facility";
+        break;
+}
+
+console.log("User is authorized to access", servicesAvailable);
